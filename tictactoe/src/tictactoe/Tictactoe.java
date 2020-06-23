@@ -40,18 +40,17 @@ reset.setBounds(100,350,100,50);
 add(reset);
 reset.addActionListener(this);
 
-}//eof showButton
-
+}
 /*********************************************************/
 public  void check(int num1){
 for(ii=0;ii<=7;ii++){
    for(jj=1;jj<=3;jj++){
         if(a[ii][jj]==num1){ a[ii][4]=11;  }
 
-   }//eof for jj
+   }
 
-}//eof for ii
-}//eof check
+}
+}
 /**********************************************************/
 
 /*********************************************************/
@@ -63,21 +62,21 @@ public void complogic(int num){
       if(a[i][j]==num){  a[i][0]=11; a[i][4]=10;    }
 	  }
   }
-   for(i=0;i<=7;i++){                                // for 1
+   for(i=0;i<=7;i++){                                
      set=true;  		   
-   if(a[i][4]==10){                                 //if 1 
+   if(a[i][4]==10){                                 
        int count=0;
-       for(j=1;j<=3;j++){                                                //for 2 
-           if(b[(a[i][j]-1)].getIcon()!=null){                               //if 2
+       for(j=1;j<=3;j++){                                                
+           if(b[(a[i][j]-1)].getIcon()!=null){                               
              count++;
-               }                                                                   //eof if 2
+               }                                                                   
             else{ yesnull=a[i][j]; }
-        }                                                                         //eof for 2
-      if(count==2){                                                        //if 2
+        }                                                                         
+      if(count==2){                                                        
          b[yesnull-1].setIcon(ic2); 
          this.check(yesnull); set=false;break;
-         }                                                                     //eof if 2
-      }                                                                     //eof if 1
+         }   
+   }
       else
 	  if(a[i][0]==10){
                 for(j=1;j<=3;j++){                                            
@@ -125,7 +124,7 @@ setLayout(null);
 setSize(330,450);
 setVisible(true);
 setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-}//eof constructor
+}
 
 /*************************************************************/
 public void itemStateChanged(ItemEvent e){
@@ -140,7 +139,7 @@ public void itemStateChanged(ItemEvent e){
 remove(c1);remove(c2);
  repaint(0,0,330,450);
  showButton();
-}//eof itemstate
+}
 /************************************************************/
 
 public void actionPerformed(ActionEvent e){
@@ -187,9 +186,9 @@ else if(type==false){                                     //  complogic
 								 }
                     }
                  }
-             }//eof for
+             }
         }
-    }//eof complogic
+    }
 
 for(i=0;i<=7;i++){
   
@@ -215,10 +214,10 @@ for(i=0;i<=7;i++){
     }  
 
 
-}//eof actionperformed
+}
 /************************************************************/
 
 public static void main(String []args){
 new Tictactoe();
-}//eof main
-}//eof class
+}
+}
